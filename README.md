@@ -49,7 +49,7 @@ Please document/populate/create the following files
   * Complete ToDo Item
 
 # Sample Designs
-Please find some sample Designs in the [design](design) folder.
+Please find some sample Designs in the [designs](designs) folder.
 Pick 1 design and implement and/or improve upon. 
 Explain why you choose this in the `DESIGN.md`.
 
