@@ -27,13 +27,13 @@ Once your happy with your code send us a pull-request to the repository and we w
 # Documentation
 Please document/populate/create the following files
 * `ASSUMPTIONS.md`
-  * Document any Assumptions and why.
+  * Document Assumptions and why.
 * `DECISIONS.md`
   * Document Decisions made and why.
 * `DESIGN.md`
   * Document Design decisions/changes/approaches and why
 * `PROBLEMS_SOLUTIONS.md`
-  * Document Design problems encountered and the solution you took
+  * Document Problems encountered and the solution you took
 
 # Requirements
 
@@ -42,18 +42,19 @@ Please document/populate/create the following files
 * SASS
 * Must be responsive
 * The number of tasks could be huge. How will this look and respond.
-* Acitons
+* Actions
   * Create ToDo Item
   * Edit ToDo Item
   * Delete ToDo Item
   * Complete ToDo Item
 
 # Sample Designs
-Please find some sample Designs in the [design](design/) folder.
-Pick 1 design and implement and/or improve upon
+Please find some sample Designs in the [design](design) folder.
+Pick 1 design and implement and/or improve upon. 
+Explain why you choose this in the `DESIGN.md`.
 
 # Sample ToDo Items
-Please find some sample ToDo Items in the [data](data/) folder.
+Please find some sample ToDo Items in the [data](data) folder.
 Samples are guides only. Document any decisions in regards to this data.
 
 # Bonus
