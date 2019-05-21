@@ -33,7 +33,7 @@ Please document/populate/create the following files
 * `DESIGN.md`
   * Document Design decisions/changes/approaches and why
 * `PROBLEMS_SOLUTIONS.md`
-  * Document Design decisions/changes/approaches and why
+  * Document Design problems encountered and the solution you took
 
 # Requirements
 
