@@ -9,31 +9,33 @@ ReactJS using the [next.js](https://nextjs.org/learn/basics/getting-started) Fra
 
 The application should create, modify and delete tasks.
 
-The tasks should also be persisted so that they survive a page refresh.
+The tasks should also be persisted so that the tasks survive a page refresh.
 
-We expect the application to be unit tested. 
-If you are pushed for time documenting how you would test the application is also sufficient
+We expect the application to be unit tested.
 
 The UI must be responsive, accessible and pretty.
 
-Have Fun!
+Please include instructions on how we can build and run the code.
 
 # Process
 
-Fork the repository into your account. 
+Create a github project.
+Once you are happy with your code please provide us with a link to the repository.
+We will review the application and get back to you.
 
-Once your happy with your code send us a pull-request to the repository and we will review it.
+Have fun!
 
 # Requirements
 
 * React 15+
-* Redux
+* State management
 * SASS
 * Must be responsive
-* The number of tasks could be huge. How will this look and respond.
+* The design must support a large number of tasks.
 
 # Bonus
 
 * Integration tests
 * React Hooks
 * Persist tasks to disk
+* Redux
