@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    // &::before {
+    //   position: absolute;
+    //   transition: 133ms opacity ease-out;
+    //   z-index: 1;
+    //   height: 8px;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   content: "";
+    //   background: linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,0));
+    //   pointer-events: none;
+    // }
+    // &::after {
+    //   position: absolute;
+    //   transition: 133ms opacity ease-out;
+    //   z-index: 1;
+    //   height: 8px;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   content: "";
+    //   background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,0));
+    //   pointer-events: none;
+    // }
+}
+
+.outer {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1 1 auto;
+
+    &::-webkit-scrollbar {
+        position: absolute;
+        width: 6px;
+        z-index: 100;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #eee;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 3px;
+    }
+}

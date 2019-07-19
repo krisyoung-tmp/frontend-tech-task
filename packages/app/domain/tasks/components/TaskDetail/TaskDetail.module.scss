@@ -1,0 +1,51 @@
+@import '../../../../styleguide/styles/variables.scss';
+
+.container {
+    flex: 1 1 auto;
+}
+.icon {
+    text {
+        display: none;
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    & button + button {
+        margin-left: auto;
+    }
+}
+
+.grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
+    justify-content: start;
+    align-content: start;
+}
+
+.attribute {
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.attributeName {
+    display: block;
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #999;
+    &::after {
+        content: ': ';
+    }
+}
+.attributeValue {
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex: 0 0 auto;
+}

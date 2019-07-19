@@ -1,0 +1,44 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:global .container {
+    flex: 1 1 auto;
+    padding: 8px;
+    display: flex;
+    align-items: stretch;
+}
+
+:global .column {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+:global .actions {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column-reverse;
+
+    button:not(:last-of-type) {
+        margin-top: 1rem;
+    }
+    @media (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-between;
+        button:not(:last-of-type) {
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.container {
+    box-shadow: $shadow1;
+    color: #333;
+    border-radius: $radiusMedium;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    .icon {
+        margin-right: 0.5rem;
+        line-height: 0;
+    }
+    & .title {
+        margin: 0;
+    }
+    & .actions {
+        margin-left: auto;
+        padding-left: 24px;
+    }
+}
+
+.body {
+    flex: 1 1 auto;
+    overflow: hidden;
+    padding: 16px;
+    background: #fcfcfc;
+}
+
+.footer {
+    flex: 0 0 auto;
+    padding: 16px;
+    border-top: 1px solid #eee;
+    background-color: #f6f6f6;
+}

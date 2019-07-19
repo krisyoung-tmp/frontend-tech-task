@@ -1,0 +1,23 @@
+@import '../../../../styleguide/styles/variables.scss';
+
+.container {
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+.fieldGroup {
+    & > * + * {
+        margin-top: 24px;
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    & button + button {
+        margin-left: 24px;
+    }
+    & button:first-of-type {
+        margin-right: auto;
+    }
+}

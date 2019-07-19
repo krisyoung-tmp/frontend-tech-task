@@ -1,0 +1,34 @@
+.container {
+    flex: 1 1 auto;
+}
+
+.body {
+    padding: 16px 8px 16px 16px;
+}
+.tasks {
+    width: 100%;
+    flex: 1 1 auto;
+
+    & > * + * {
+        margin-top: 16px;
+    }
+}
+
+.filter {
+    h4 {
+        margin: 0 0 4px;
+    }
+    & + & {
+        margin-top: 1rem;
+    }
+}
+
+.listitem {
+    padding: 4px 16px 4px 4px;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.8rem;
+}

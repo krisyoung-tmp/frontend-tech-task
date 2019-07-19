@@ -1,0 +1,21 @@
+{
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "start:api": "lerna run start --scope api",
+        "start:app": "lerna run start --scope app",
+        "prestart": "lerna bootstrap",
+        "start": "pm2 start",
+        "cypress:open": "cypress open"
+    },
+    "devDependencies": {
+        "@testing-library/cypress": "^4.0.5",
+        "@testing-library/dom": "^5.6.0",
+        "cypress": "^3.4.0",
+        "lerna": "^3.13.4"
+    },
+    "dependencies": {
+        "dotenv": "^8.0.0",
+        "pm2": "^3.5.1"
+    }
+}

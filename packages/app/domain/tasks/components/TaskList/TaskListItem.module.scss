@@ -1,0 +1,112 @@
+@import '../../../../styleguide/styles/variables.scss';
+
+.container {
+    border-left: solid 6px;
+}
+
+.content {
+    padding: 8px 16px;
+    display: flex;
+    height: 100px;
+}
+
+.header {
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.title {
+    color: map-get($colors, 'headerText');
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: underline;
+    &:hover {
+        color: map-get($colors, 'secondary');
+    }
+
+    .selected & {
+        color: map-get($colors, 'primary');
+    }
+}
+
+.assignee {
+    font-weight: normal;
+    font-size: 12px;
+    margin: 8px 0;
+    color: #666;
+}
+
+.username {
+    font-weight: bold;
+}
+.description {
+    font-size: 12px;
+    margin: 4px 0;
+    color: #666;
+    max-width: 480px;
+
+    &.truncated {
+        &::after {
+            content: '\2026';
+        }
+    }
+}
+
+.date {
+    font-weight: bold;
+}
+
+.status {
+    margin-left: auto;
+}
+
+.meta {
+    font-size: 11px;
+    color: #666;
+    display: flex;
+    & > * + * {
+        margin-left: 16px;
+    }
+}
+
+.footer {
+    border-top: 1px solid #eee;
+    background-color: #f6f6f6;
+    padding: 8px 16px;
+    display: flex;
+}
+
+.dueDate {
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.actions {
+    display: flex;
+    margin-left: auto;
+}
+
+.icon {
+    text {
+        display: none;
+    }
+}
+
+.action {
+    appearance: none;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: inset 6px -4px 6px -6px rgba(0, 0, 0, 0.6);
+    .icon {
+        fill: white;
+    }
+}

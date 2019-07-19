@@ -1,0 +1,35 @@
+@import '../../../styleguide/styles/variables.scss';
+
+.container {
+    padding: 16px;
+    border: none;
+    font-size: 1rem;
+    background-color: map-get($colors, 'primary');
+    color: white;
+    border-radius: $radiusMedium;
+
+    &:disabled {
+        opacity: 0.6;
+        background-color: #ccc;
+    }
+}
+
+.primary {
+    background-color: map-get($colors, 'primary');
+}
+.secondary {
+    background-color: map-get($colors, 'secondary');
+}
+.tertiary {
+    background-color: map-get($colors, 'tertiary');
+}
+
+.invisible {
+    padding: 0;
+    background-color: transparent;
+    color: map-get($colors, 'primary');
+}
+
+.round {
+    border-radius: 50%;
+}

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: auto;
+    transform-origin: center center;
+    overflow: hidden;
+    flex: 0 1 auto;
+    max-width: 600px;
+}
+
+.closeBtnContainer {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    padding: 8px;
+}

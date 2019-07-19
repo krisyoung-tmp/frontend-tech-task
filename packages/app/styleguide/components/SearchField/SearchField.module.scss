@@ -1,0 +1,15 @@
+@import '../../../styleguide/styles/variables.scss';
+
+.container {
+    border: solid 3px map-get($colors, 'tertiary');
+    border-radius: 20px;
+    display: flex;
+}
+
+.field {
+    border: none;
+    background: transparent;
+    padding: 8px;
+    flex: 1 1 auto;
+    font-size: 1rem;
+}
