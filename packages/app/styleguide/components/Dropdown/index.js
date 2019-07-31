@@ -51,7 +51,7 @@ export const Dropdown = ({
             document.removeEventListener('scroll', onReposition)
             window.removeEventListener('resize', onReposition)
         }
-    }, [triggerRef.current, setMenuPosition])
+    }, [triggerRef.current, setMenuPosition, open])
 
     React.useEffect(() => {
         const onMouseDown = (ev) => {
