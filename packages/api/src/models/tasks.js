@@ -25,15 +25,12 @@ export default Array.from({ length: 2000 })
         title: titles[idx % titles.length],
         description: descriptions[idx % descriptions.length],
         status: statuses[Math.floor(Math.random() * statuses.length)],
-        author: `${Math.ceil(Math.random() * 3)}`,
+        author: `${Math.ceil(idx % 3)}`,
         assignee: `${Math.ceil(Math.random() * 3)}`,
-        created_date: `2019-07-${15 -
-            Math.floor(Math.random() * 5)}T12:00:00.000Z`,
-        updated_date: `2019-07-${24 -
-            Math.floor(Math.random() * 5)}T12:00:00.000Z`,
+        created_date: `2019-07-${15 - Math.floor(idx % 5)}T12:00:00.000Z`,
+        updated_date: `2019-07-${24 - Math.floor(idx % 5)}T12:00:00.000Z`,
         completed_date: null,
-        due_date: `2019-07-${17 +
-            Math.floor(Math.random() * 12)}T12:00:00.000Z`,
+        due_date: `2019-07-${17 + Math.floor(idx % 12)}T12:00:00.000Z`,
     }))
     .reduce((acc, task) => {
         acc[task.id] = task

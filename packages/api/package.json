@@ -22,7 +22,8 @@
         "cors": "^2.8.5",
         "express": "4.17.1",
         "express-bearer-token": "^2.4.0",
-        "nodemon": "1.19.1"
+        "nodemon": "1.19.1",
+        "uuid": "^3.3.2"
     },
     "devDependencies": {
         "@babel/cli": "^7.5.5"

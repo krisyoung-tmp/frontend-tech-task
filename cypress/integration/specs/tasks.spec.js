@@ -3,7 +3,7 @@ describe('Task List', () => {
         cy.server({ urlMatchingOptions: { matchBase: false } })
         cy.request('POST', 'http://localhost:9001/reset')
         cy.login()
-        cy.visit('http://localhost:9000/tasks')
+        cy.visit('http://localhost:3000/tasks')
         cy.route('GET', 'http://localhost:9001/tasks').as('getTasks')
         cy.wait('@getTasks')
     })
@@ -20,7 +20,7 @@ describe('Task List', () => {
         cy.getByTestId('filters.status').select('IN_PROGRESS')
         cy.getByTestId('tasklist.footer').should(
             'have.text',
-            'Showing 480 of 2000 tasks'
+            'Showing 523 of 2000 tasks'
         )
     })
 
@@ -32,7 +32,7 @@ describe('Task List', () => {
             .check()
         cy.getByTestId('tasklist.footer').should(
             'have.text',
-            'Showing 680 of 2000 tasks'
+            'Showing 646 of 2000 tasks'
         )
     })
 

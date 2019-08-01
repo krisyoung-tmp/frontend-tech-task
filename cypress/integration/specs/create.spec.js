@@ -3,7 +3,7 @@ describe('Create Task', () => {
         cy.server({ urlMatchingOptions: { matchBase: false } })
         cy.seed()
         cy.login()
-        cy.visit('http://localhost:9000/tasks')
+        cy.visit('http://localhost:3000/tasks')
         cy.getByTestId('showCreate').click()
     })
 

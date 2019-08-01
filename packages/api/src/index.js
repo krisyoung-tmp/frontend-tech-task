@@ -1,5 +1,4 @@
 import express from 'express'
-import { config } from 'dotenv'
 import path from 'path'
 import cors from 'cors'
 import * as routes from './routes'
@@ -11,8 +10,6 @@ let models = {}
 const seed = () => {
     models = { users: { ..._models.users }, tasks: { ..._models.tasks } }
 }
-
-config({ path: path.join(__dirname, '../../../.env') })
 
 const app = express()
 app.use(cors())
@@ -40,8 +37,6 @@ app.use('/tasks', routes.tasks)
 
 seed()
 
-app.listen(process.env.PORT || 9000, () =>
-    console.log(
-        `Example app listening on port ${process.env.PORT || 9000}!`
-    )
+app.listen(process.env.PORT || 9001, () =>
+    console.log(`app listening on port ${process.env.PORT || 9001}!`)
 )

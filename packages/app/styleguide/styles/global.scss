@@ -42,3 +42,10 @@ body {
         }
     }
 }
+
+:global .tasks {
+    flex: 1 1 640px;
+}
+:global .task {
+    flex: 0 1 640px;
+}

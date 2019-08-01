@@ -4,11 +4,15 @@
     "description": "> TODO: description",
     "author": "Kris Young <kris.young@woodmac.com>",
     "license": "ISC",
+    "engines": {
+        "node": "10.x",
+        "yarn": "1.x"
+    },
     "scripts": {
         "svgr": "svgr -d styleguide/icons/ static/icons/",
         "build": "next build",
         "start": "next start",
-        "dev": "next -p 9000"
+        "dev": "next -p 3000"
     },
     "dependencies": {
         "@zeit/next-sass": "^1.0.1",

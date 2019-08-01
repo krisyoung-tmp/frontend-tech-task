@@ -1,7 +1,7 @@
 describe('Sign In', () => {
     before(() => {
         cy.request('POST', 'http://localhost:9001/reset')
-        cy.visit('http://localhost:9000')
+        cy.visit('http://localhost:3000')
     })
 
     it('should contain a sign in form', () => {})

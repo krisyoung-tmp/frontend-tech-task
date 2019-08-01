@@ -1,7 +1,7 @@
 export const createApi = (http) => ({
     getAll: () =>
         http.request({
-            url: '/users',
+            url: '/users/',
             method: 'get',
         }),
 })

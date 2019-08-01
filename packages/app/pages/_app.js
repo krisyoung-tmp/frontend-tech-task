@@ -6,6 +6,8 @@ import { UIProvider } from '../domain/ui/context'
 import { AuthProvider } from '../domain/auth/context'
 import { TaskProvider } from '../domain/tasks/context'
 import { UserProvider } from '../domain/users/context'
+import getConfig from 'next/config'
+const { publicRuntimeConfig } = getConfig()
 
 class AsuraTaskApp extends App {
     static async getInitialProps({ Component, ctx }) {
@@ -21,7 +23,10 @@ class AsuraTaskApp extends App {
     componentWillMount() {
         const storage = createStorage()
         const http = createHTTPClient(
-            { baseURL: 'http://localhost:9001' },
+            {
+                baseURL:
+                    publicRuntimeConfig.apiEndpoint || 'http://localhost:9001',
+            },
             { storage }
         )
         this.http = http

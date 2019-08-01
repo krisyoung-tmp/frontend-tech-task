@@ -5,7 +5,6 @@ import { useTaskActions } from '../domain/tasks/context'
 import { useUserActions } from '../domain/users/context'
 import { TaskList } from '../domain/tasks/components'
 import { TaskView } from '../domain/tasks/components'
-import css from './tasks.module.scss'
 import { useUIState, useUIActions } from '../domain/ui/context'
 import cx from 'classnames'
 
@@ -42,11 +41,11 @@ function Tasks({ isDesktop }) {
 
     return (
         <div className="container">
-            <div className={cx('column', css.tasks)}>
+            <div className={cx('column', 'tasks')}>
                 <TaskList />
             </div>
             {isDesktop && showTask && (
-                <div className={cx(css.column, css.task)}>
+                <div className={cx('column', 'task')}>
                     <TaskView onClose={() => hideFlyover('task')} />
                 </div>
             )}

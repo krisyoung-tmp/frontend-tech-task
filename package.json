@@ -6,14 +6,13 @@
         "yarn": "1.x"
     },
     "scripts": {
-        "prestart:api": "lerna run build --scope api",
-        "start:api": "lerna run start --scope api",
-        "prestart:app": "lerna run build --scope app",
-        "start:app": "lerna run start --scope app",
         "bootstrap": "lerna bootstrap",
         "cypress:open": "cypress open",
-        "publish:heroku:api": "git subtree push --prefix packages/api heroku-asuraft-tasks-api master || true",
-        "publish:heroku:app": "git subtree push --prefix packages/app heroku-asuraft-tasks-app master || true"
+        "start:api": "lerna run start --scope api",
+        "start:app": "lerna run dev --scope app",
+        "start": "pm2 start",
+        "publish:heroku:api": "git subtree split --prefix packages/api -b api-publish && git push heroku-asuraft-tasks-api api-publish:master --force && git branch -D api-publish || true",
+        "publish:heroku:app": "git subtree split --prefix packages/app -b app-publish && git push heroku-asuraft-tasks-app app-publish:master --force && git branch -D app-publish || true"
     },
     "devDependencies": {
         "@testing-library/cypress": "^4.0.5",
@@ -22,7 +21,6 @@
     },
     "dependencies": {
         "lerna": "^3.13.4",
-        "dotenv": "^8.0.0",
         "pm2": "^3.5.1",
         "@babel/cli": "^7.5.5",
         "@babel/core": "7.5.0",

@@ -3,7 +3,7 @@ describe('View Task', () => {
         cy.server({ urlMatchingOptions: { matchBase: false } })
         cy.seed()
         cy.login()
-        cy.visit('http://localhost:9000/tasks')
+        cy.visit('http://localhost:3000/tasks')
         cy.route('GET', 'http://localhost:9001/tasks').as('getTasks')
         cy.wait('@getTasks')
     })
@@ -18,8 +18,10 @@ describe('View Task', () => {
     })
 
     it('should not allow editing of tasks that arent owned by the current user', () => {
+        cy.getByTestId('filters.query').type('i can do that')
+        cy.wait(300)
         cy.getAllByTestId('tasklist.item')
-            .first()
+            .eq(2)
             .find('a')
             .click()
 
