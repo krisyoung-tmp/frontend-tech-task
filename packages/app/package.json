@@ -6,7 +6,9 @@
     "license": "ISC",
     "scripts": {
         "svgr": "svgr -d styleguide/icons/ static/icons/",
-        "start": "next -p 9000"
+        "build": "next build",
+        "start": "next start",
+        "dev": "next -p 9000"
     },
     "dependencies": {
         "@zeit/next-sass": "^1.0.1",

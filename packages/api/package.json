@@ -5,8 +5,15 @@
     "author": "Kris Young <kris.young@woodmac.com>",
     "license": "ISC",
     "main": "src/index.js",
+    "engines": {
+        "node": "10.x",
+        "yarn": "1.x"
+    },
     "scripts": {
-        "start": "nodemon --exec babel-node src/index.js"
+        "prebuild": "rm -rf build && mkdir build",
+        "build": "babel ./src -d ./build",
+        "start": "node ./build/index.js",
+        "dev": "nodemon --exec babel-node src/index.js"
     },
     "dependencies": {
         "@babel/core": "7.5.0",
@@ -16,5 +23,8 @@
         "express": "4.17.1",
         "express-bearer-token": "^2.4.0",
         "nodemon": "1.19.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.5.5"
     }
 }

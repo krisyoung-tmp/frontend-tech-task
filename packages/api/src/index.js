@@ -40,8 +40,8 @@ app.use('/tasks', routes.tasks)
 
 seed()
 
-app.listen(process.env.API_PORT || 9000, () =>
+app.listen(process.env.PORT || 9000, () =>
     console.log(
-        `Example app listening on port ${process.env.API_PORT || 9000}!`
+        `Example app listening on port ${process.env.PORT || 9000}!`
     )
 )
